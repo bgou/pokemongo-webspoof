@@ -67,4 +67,4 @@ fastlane/screenshots
 
 iOSInjectionProject/
 .vscode/
-
+src/config/api.js
