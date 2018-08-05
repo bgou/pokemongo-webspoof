@@ -92,7 +92,7 @@ class Map extends Component {
             options={ () => this.mapOptions }
             onGoogleApiLoaded={ this.handleGoogleMapLoaded }
             yesIWantToUseGoogleMapApiInternals={ true }
-            apiKey={ MapsApi.apiKey }>
+            bootstrapURLKeys = { { key: MapsApi.apiKey } }>
 
             { /* userlocation center */ }
             <Pokeball lat={ userLocation[0] } lng={ userLocation[1] } />

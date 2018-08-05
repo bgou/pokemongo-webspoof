@@ -5,6 +5,6 @@
 */
 
 const MapsApi = {
-    apiKey: 'AIzaSyC4_-IPIwzW2WtJzYxHq6486yjoqcqfxqI'
+    apiKey: YOUR_API_KEY
 };
 export default MapsApi;
