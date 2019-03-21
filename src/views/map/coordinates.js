@@ -8,6 +8,10 @@ const handleChange = (idx) => action(({ target: { value } }) => {
   userLocation[idx] = parseFloat(value)
 })
 
+const formatValue = (coordinate) => {
+  return parseFloat(`${coordinate}`).toFixed(6)
+}
+
 const Coordinates = observer(() =>
   <div className='clearfix coordinates'>
     { [ 'lat', 'lng' ].map((direction, idx) =>
@@ -19,9 +23,9 @@ const Coordinates = observer(() =>
           <input
             type='text'
             className='form-control'
-            placeholder={ direction }
+            placeholder={ formatValue(direction) }
             aria-describedby='basic-addon1'
-            value={ userLocation[idx] }
+            value={ formatValue(userLocation[idx]) }
             onChange={ handleChange(idx) } />
         </div>
       </div>

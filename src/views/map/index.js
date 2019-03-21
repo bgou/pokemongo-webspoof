@@ -31,14 +31,18 @@ class Map extends Component {
   }
 
   componentWillMount() {
+    const kirkland = [ 47.674835, -122.206274 ]
+
+    userLocation.replace(kirkland)
+
     // get user geolocation
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        this.handleGeolocationSuccess,
-        this.handleGeolocationFail,
-        { enableHighAccuracy: true, maximumAge: 0 }
-      )
-    }
+    // if (navigator.geolocation) {
+    //   navigator.geolocation.getCurrentPosition(
+    //     this.handleGeolocationSuccess,
+    //     this.handleGeolocationFail,
+    //     { enableHighAccuracy: true, maximumAge: 0 }
+    //   )
+    // }
   }
 
   // geolocation API might be down, use http://ipinfo.io
